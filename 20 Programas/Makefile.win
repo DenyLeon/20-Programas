@@ -1,0 +1,88 @@
+# Project: Proyecto 1
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = Programas.o "Suma,\ resta,\ multiplicación\ y\ división.o" "Par\ o\ Impar.o" "Conversor\ de\ medidas\ y\ pesos.o" "Palabra\ o\ numero\ palindroma.o" "Numeros\ arábigos\ a\ romanos.o" "Enteros\ a\ letras.o" "Letras\ con\ decimales.o" "Tabla\ de\ multiplicar.o" "Tablas\ de\ multiplicar.o" "Grafica\ de\ multiplicacion.o" "Binario\ a\ decimal.o" "decimal\ a\ hexadecimal.o" Figuras.o "Mover\ punto.o" Cajero.o Hipotenusa.o "Promedio\ de\ notas.o" "Cambio\ de\ color.o" "Longitud\ y\ diametro.o" "Calculo\ de\ perímetro\ y\ area.o"
+LINKOBJ  = Programas.o "Suma, resta, multiplicación y división.o" "Par o Impar.o" "Conversor de medidas y pesos.o" "Palabra o numero palindroma.o" "Numeros arábigos a romanos.o" "Enteros a letras.o" "Letras con decimales.o" "Tabla de multiplicar.o" "Tablas de multiplicar.o" "Grafica de multiplicacion.o" "Binario a decimal.o" "decimal a hexadecimal.o" Figuras.o "Mover punto.o" Cajero.o Hipotenusa.o "Promedio de notas.o" "Cambio de color.o" "Longitud y diametro.o" "Calculo de perímetro y area.o"
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
+INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = "Proyecto 1.exe"
+CXXFLAGS = $(CXXINCS) 
+CFLAGS   = $(INCS) 
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+Programas.o: Programas.cpp
+	$(CPP) -c Programas.cpp -o Programas.o $(CXXFLAGS)
+
+"Suma,\ resta,\ multiplicación\ y\ división.o": Suma,\ resta,\ multiplicación\ y\ división.cpp
+	$(CPP) -c "Suma, resta, multiplicación y división.cpp" -o "Suma, resta, multiplicación y división.o" $(CXXFLAGS)
+
+"Par\ o\ Impar.o": Par\ o\ Impar.cpp
+	$(CPP) -c "Par o Impar.cpp" -o "Par o Impar.o" $(CXXFLAGS)
+
+"Conversor\ de\ medidas\ y\ pesos.o": Conversor\ de\ medidas\ y\ pesos.cpp
+	$(CPP) -c "Conversor de medidas y pesos.cpp" -o "Conversor de medidas y pesos.o" $(CXXFLAGS)
+
+"Palabra\ o\ numero\ palindroma.o": Palabra\ o\ numero\ palindroma.cpp
+	$(CPP) -c "Palabra o numero palindroma.cpp" -o "Palabra o numero palindroma.o" $(CXXFLAGS)
+
+"Numeros\ arábigos\ a\ romanos.o": Numeros\ arábigos\ a\ romanos.cpp
+	$(CPP) -c "Numeros arábigos a romanos.cpp" -o "Numeros arábigos a romanos.o" $(CXXFLAGS)
+
+"Enteros\ a\ letras.o": Enteros\ a\ letras.cpp
+	$(CPP) -c "Enteros a letras.cpp" -o "Enteros a letras.o" $(CXXFLAGS)
+
+"Letras\ con\ decimales.o": Letras\ con\ decimales.cpp
+	$(CPP) -c "Letras con decimales.cpp" -o "Letras con decimales.o" $(CXXFLAGS)
+
+"Tabla\ de\ multiplicar.o": Tabla\ de\ multiplicar.cpp
+	$(CPP) -c "Tabla de multiplicar.cpp" -o "Tabla de multiplicar.o" $(CXXFLAGS)
+
+"Tablas\ de\ multiplicar.o": Tablas\ de\ multiplicar.cpp
+	$(CPP) -c "Tablas de multiplicar.cpp" -o "Tablas de multiplicar.o" $(CXXFLAGS)
+
+"Grafica\ de\ multiplicacion.o": Grafica\ de\ multiplicacion.cpp
+	$(CPP) -c "Grafica de multiplicacion.cpp" -o "Grafica de multiplicacion.o" $(CXXFLAGS)
+
+"Binario\ a\ decimal.o": Binario\ a\ decimal.cpp
+	$(CPP) -c "Binario a decimal.cpp" -o "Binario a decimal.o" $(CXXFLAGS)
+
+"decimal\ a\ hexadecimal.o": decimal\ a\ hexadecimal.cpp
+	$(CPP) -c "decimal a hexadecimal.cpp" -o "decimal a hexadecimal.o" $(CXXFLAGS)
+
+Figuras.o: Figuras.cpp
+	$(CPP) -c Figuras.cpp -o Figuras.o $(CXXFLAGS)
+
+"Mover\ punto.o": Mover\ punto.cpp
+	$(CPP) -c "Mover punto.cpp" -o "Mover punto.o" $(CXXFLAGS)
+
+Cajero.o: Cajero.cpp
+	$(CPP) -c Cajero.cpp -o Cajero.o $(CXXFLAGS)
+
+Hipotenusa.o: Hipotenusa.cpp
+	$(CPP) -c Hipotenusa.cpp -o Hipotenusa.o $(CXXFLAGS)
+
+"Promedio\ de\ notas.o": Promedio\ de\ notas.cpp
+	$(CPP) -c "Promedio de notas.cpp" -o "Promedio de notas.o" $(CXXFLAGS)
+
+"Cambio\ de\ color.o": Cambio\ de\ color.cpp
+	$(CPP) -c "Cambio de color.cpp" -o "Cambio de color.o" $(CXXFLAGS)
+
+"Longitud\ y\ diametro.o": Longitud\ y\ diametro.cpp
+	$(CPP) -c "Longitud y diametro.cpp" -o "Longitud y diametro.o" $(CXXFLAGS)
+
+"Calculo\ de\ perímetro\ y\ area.o": Calculo\ de\ perímetro\ y\ area.cpp
+	$(CPP) -c "Calculo de perímetro y area.cpp" -o "Calculo de perímetro y area.o" $(CXXFLAGS)
